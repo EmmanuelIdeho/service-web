@@ -21,13 +21,27 @@ This project demonstrates how to secure a simple web application using [Spring S
 ```bash
 git clone https://github.com/EmmanuelIdeho/service-web.git
 cd service-web
+```
 
 ### 2. Build the Application
 ```bash
 ./mvnw clean install
+```
 
 ### 3. Run the Application
 ```bash
 ./mvnw spring-boot:run
-
+```
 - the application will be available at http://localhost:8080
+
+### 4. Access the Web App
+- Navigate to  http://localhost:8080
+- You'll be redirected to a login page.
+- Use the following credentials (from `WebSecurityConfig.java`):
+```pgsql
+Username: user
+Password: generated in the console on app startup
+```
+## Customization
+- To change the default user credentials or authentication logic, edit `WebSecurityConfig.java`
+- The login page can be customized by modifying `src/main/resources/templates/login.html`.
